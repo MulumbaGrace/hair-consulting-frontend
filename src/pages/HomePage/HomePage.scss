@@ -1,0 +1,62 @@
+@import "../../styles/partials/mixins";
+
+.home {
+    text-align: center;
+  
+    &__header {
+      margin-bottom: 50px;
+    }
+  
+    &__title {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+  
+    &__description {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+  
+    &__about {
+      margin-bottom: 50px;
+    }
+  
+    &__beliefs {
+      margin-bottom: 50px;
+  
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+  
+      ul {
+        text-align: left;
+        list-style-type: none;
+        padding: 0;
+  
+        li {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  
+    &__cta {
+      margin-bottom: 50px;
+    }
+  
+    &__links {
+      margin-top: 20px;
+      
+      .home__link {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #007BFF;
+        font-weight: bold;
+  
+        &:hover {
+          color: #0056b3;
+        }
+      }
+    }
+}
+  
