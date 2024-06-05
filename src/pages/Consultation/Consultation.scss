@@ -1,0 +1,56 @@
+@import "../../styles/partials/mixins";
+
+.consultation {
+    background-image: url('../../assets/images/background-photo.jpg');
+    &__title {
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+
+    }
+  
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    &__input,
+    &__textarea,
+    &__select {
+      margin: 10px 0;
+      padding: 10px;
+      width: 300px;
+      max-width: 80%;
+      box-sizing: border-box;
+    }
+  
+    &__textarea {
+      height: 100px;
+    }
+  
+    &__label {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 10px 0;
+      width: 300px;
+      max-width: 80%;
+      box-sizing: border-box;
+    }
+  
+    &__button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 1.25rem;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+  
