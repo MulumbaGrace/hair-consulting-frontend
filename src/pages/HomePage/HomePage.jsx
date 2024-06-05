@@ -5,6 +5,8 @@ import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import image5 from '../../assets/images/image5.png';
 import image6 from '../../assets/images/image6.png';
+
+
 // import Hero from "../../components/Hero/Hero";
 
 const Home = () => {
