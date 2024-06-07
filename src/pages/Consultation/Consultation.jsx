@@ -50,7 +50,7 @@ const Consultation = () => {
           colorTreatment: '',
           additionalInfo: '',
         });
-        navigate("/");
+        navigate("/submission");
       } catch (err) {
         console.error('There was an error submitting the form!', err);
         alert('Failed to submit consultation request. Please try again.');
