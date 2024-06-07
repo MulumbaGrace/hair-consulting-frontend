@@ -1,41 +1,65 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; 
 import './Consultation.scss';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 
 const Consultation = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    description: '',
-    hairType: '',
-    hairTexture: '',
-    scalpCondition: '',
-    hairConcerns: '',
-    washingFrequency: '',
-    hairProducts: '',
-    heatStylingFrequency: '',
-    colorTreatment: '',
-    additionalInfo: '',
-  });
+    const [formData, setFormData] = useState({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      description: '',
+      hairType: '',
+      hairTexture: '',
+      scalpCondition: '',
+      hairConcerns: '',
+      washingFrequency: '',
+      hairProducts: '',
+      heatStylingFrequency: '',
+      colorTreatment: '',
+      additionalInfo: '',
+    });
+  
+    const navigate = useNavigate();
+  
+    const handleChange = (e) => {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      try {
+        await axios.post('http://localhost:8000/consultations', formData);
+        alert('Consultation request submitted successfully!');
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          description: '',
+          hairType: '',
+          hairTexture: '',
+          scalpCondition: '',
+          hairConcerns: '',
+          washingFrequency: '',
+          hairProducts: '',
+          heatStylingFrequency: '',
+          colorTreatment: '',
+          additionalInfo: '',
+        });
+        navigate("/");
+      } catch (err) {
+        console.error('There was an error submitting the form!', err);
+        alert('Failed to submit consultation request. Please try again.');
+      }
+    };
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    axios.post('/consultation', formData)
-      .then(response => {
-        alert(response.data);
-      })
-      .catch(error => {
-        console.error('There was an error submitting the form!', error);
-      });
-  };
+    if (!formData) {
+        return <div>Loading...</div>; 
+    }
 
   return (
     

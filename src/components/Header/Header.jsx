@@ -11,7 +11,7 @@ const Header = () => {
         <Link to="/"><img src={logo} alt="Hair Consulting Logo" /></Link>
       </div>
       <div className="header__link">
-        <Link to="/consultation" className="header__consultation-link">
+        <Link to="/consultations" className="header__consultation-link">
           Request Consultation
         </Link>
       </div>
