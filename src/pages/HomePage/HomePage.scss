@@ -1,0 +1,102 @@
+@import "../../styles/partials/mixins";
+
+.home {
+    text-align: center;
+    background-color: #d4d4d4c4;
+  
+    &__header {
+      margin-bottom: 50px;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+  
+    &__title {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+  
+    &__description {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+  
+    &__about {
+      margin-bottom: 50px;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      @include tablet {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 1rem;
+      }
+    }
+    &__about-img { 
+        width: 100%;
+        @include tablet {
+            width: 25rem;
+            }
+        @include desktop {
+            width: 25rem;
+            }
+    }
+    &__beliefs {
+      margin-bottom: 50px;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      text-align: center;
+      @include tablet {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .home__beliefs-img {
+        width: 100%;
+        @include tablet {
+            width: 25rem;
+            }
+        @include desktop {
+            width: 25rem;
+            }
+    }
+  
+    &__beliefs-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+  
+    .home__beliefs-items {
+        text-align: left;
+        list-style-type: none;
+        padding: 0;
+  
+        .home__beliefs-list {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  
+    &__cta {
+      margin-bottom: 50px;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+  
+    &__links {
+      margin-top: 20px;
+      
+      .home__link {
+        margin: 0 10px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+  
+        &:hover {
+          color: #bc97ab;
+          text-decoration: underline;
+        }
+      }
+    }
+}
+  

@@ -1,0 +1,30 @@
+@import '../../styles/partials/mixins';
+
+.footer {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+  
+    &__hours {
+      margin-bottom: 20px;
+      color: white;
+  
+      h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        margin: 5px 0;
+        font-size: 1em;
+      }
+    }
+  
+    &__copyright {
+      p {
+        font-size: 0.9em;
+        color: #888;
+      }
+    }
+}
+  
