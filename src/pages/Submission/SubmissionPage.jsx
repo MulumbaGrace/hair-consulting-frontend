@@ -3,7 +3,7 @@ import './SubmissionPage.scss';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 
-const SubmissionPage = () => {
+const faq = () => {
     const [activeIndex, setActiveIndex] = useState(null);
     const faqData = [
     {
